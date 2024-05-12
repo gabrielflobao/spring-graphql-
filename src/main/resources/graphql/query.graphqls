@@ -1,0 +1,18 @@
+ type Query{
+     findById(id:ID):ProdutoResponse
+}
+
+type ProdutoResponse{
+    id:ID
+    nome:String!
+    preco:Float
+}
+ input Produto{
+     id:ID
+     nome:String!
+     preco:Float
+ }
+ type Mutation{
+    save(produto:Produto):ProdutoResponse
+
+}
